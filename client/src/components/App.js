@@ -8,9 +8,16 @@ const App = () => {
   const [firstOrLast, setFirstOrLast] = useState("first_name");
 
   useEffect (() => {
-    fetch(`${shiftURL}?sort_by=${firstOrLast}`)
-    .then(res => res.json())
-    .then(setShifts)
+    // fetch(`${shiftURL}?sort_by=${firstOrLast}`)
+    // .then(res => res.json())
+    // .then(setShifts)
+    const getShifts = async () => {
+      let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
+      let data = await response.json();
+      setShifts(data);
+    };
+
+    getShifts();
   },[firstOrLast])
 
 
@@ -35,7 +42,7 @@ const App = () => {
       <table className="w-full table-auto border-[1px] border-black">
         <thead className="text-center">
           <tr className="bg-slate-300">
-          {["Employee", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
+          {[" ", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
             (col, index) => {
               let totalHours = 0
               for (const employee of shifts) {
