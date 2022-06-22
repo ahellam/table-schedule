@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import EmployeeRow from "./EmployeeRow";
+import SortSelect from "./SortSelect";
 
 const App = () => {
 
@@ -24,19 +25,7 @@ const App = () => {
   return (
     <div className="App">
 
-      <div className="m-4">
-        <label>
-          Sort by
-          <select
-            className="border-[1px] border-black rounded-md ml-1"
-            value={firstOrLast}
-            onChange={(e) => setFirstOrLast(e.target.value)}
-          >
-            <option value="first_name">First Name</option>
-            <option value="last_name">Last Name</option>
-          </select>
-        </label>
-      </div>
+      <SortSelect firstOrLast={firstOrLast} setFirstOrLast={setFirstOrLast}/>
 
       <div className="m-4">
       <table className="w-full table-auto border-[1px] border-black">
