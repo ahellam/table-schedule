@@ -14,7 +14,7 @@ const Shift = ({ shift }) => {
 
   return (
     <td>
-      <div className={`${cssColors[`${color}`]} text-white p-3 font-semibold`}>
+      <div className={`${cssColors[color]} text-white p-3 font-semibold`}>
         <div>
           {start_at} - {end_at}
         </div>
