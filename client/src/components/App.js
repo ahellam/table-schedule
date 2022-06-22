@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="App">
 
-      <div className="m-1">
+      <div className="m-4">
         <label>
           Sort by
           <select
@@ -38,7 +38,7 @@ const App = () => {
         </label>
       </div>
 
-      <div className="m-1">
+      <div className="m-4">
       <table className="w-full table-auto border-[1px] border-black">
         <thead className="text-center">
           <tr className="bg-slate-300">

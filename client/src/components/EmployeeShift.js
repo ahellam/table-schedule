@@ -15,10 +15,6 @@ const EmployeeShift = ({ shifts }) => {
       {shiftWithNullDays.map((shift) => (
         <Shift shift={shift} />
       ))}
-      
-    {/* {shiftWithNullDays.map((shift) => {\      
-        return shift ? <Table.Cell>{shift.role}</Table.Cell> : <Table.Cell></Table.Cell>
-      })} */}
     </Fragment>
   )
 }
