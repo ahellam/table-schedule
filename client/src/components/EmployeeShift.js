@@ -1,5 +1,5 @@
-import {Fragment} from 'react'
-import Shift from './Shift';
+import { Fragment } from "react";
+import Shift from "./Shift";
 
 const EmployeeShift = ({ shifts }) => {
   const shiftWithNullDays = [];
@@ -16,7 +16,7 @@ const EmployeeShift = ({ shifts }) => {
         <Shift shift={shift} />
       ))}
     </Fragment>
-  )
-}
+  );
+};
 
-export default EmployeeShift
+export default EmployeeShift;

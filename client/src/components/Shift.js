@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
 const Shift = ({ shift }) => {
   if (!shift) return <td></td>;
-  
+
   const { start_at, end_at, role, color } = shift;
 
   const cssColors = {
-    red: 'bg-red-700',
-    orange: 'bg-orange-500',
-    green: 'bg-green-600',
-    purple: 'bg-purple-700'
-  }
+    red: "bg-red-700",
+    orange: "bg-orange-500",
+    green: "bg-green-600",
+    purple: "bg-purple-700",
+  };
 
   return (
     <td>
@@ -18,12 +18,10 @@ const Shift = ({ shift }) => {
         <div>
           {start_at} - {end_at}
         </div>
-        <div>
-          {role}
-        </div>
+        <div> {role} </div>
       </div>
     </td>
-  )
-}
+  );
+};
 
-export default Shift
+export default Shift;
