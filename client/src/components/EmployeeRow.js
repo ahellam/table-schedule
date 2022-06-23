@@ -2,6 +2,7 @@ import React from "react";
 import EmployeeShift from "./EmployeeShift";
 
 const EmployeeRow = ({ employee }) => {
+
   return (
     <tr className="border-[1px] border-black">
       <td className="text-md font-bold py-3 border-[1px] border-black">

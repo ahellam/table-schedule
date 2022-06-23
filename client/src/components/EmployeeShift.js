@@ -12,8 +12,8 @@ const EmployeeShift = ({ shifts }) => {
 
   return (
     <Fragment>
-      {shiftWithNullDays.map((shift) => (
-        <Shift shift={shift} />
+      {shiftWithNullDays.map((shift, index) => (
+        <Shift key={index} shift={shift} />
       ))}
     </Fragment>
   );
