@@ -20,8 +20,8 @@ const Table = ({ shifts }) => {
           </tr>
         </thead>
         <tbody className="border-[1px] border-black text-center">
-          {shifts.map((employee) => (
-            <EmployeeRow key={employee.name} employee={employee}/>
+          {shifts.map((employee, index) => (
+            <EmployeeRow key={employee.name} employee={employee} index={index}/>
           ))}
         </tbody>
       </table>

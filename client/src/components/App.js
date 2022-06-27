@@ -14,6 +14,9 @@ const App = () => {
 
     const getShifts = async () => {
       let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
+      if (!response.ok){
+        throw new Error (`Request failed with status code ${response.status}`);
+      }
       let data = await response.json();
       setShifts(data);
     };
@@ -22,7 +25,7 @@ const App = () => {
   }, [firstOrLast]);
 
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <SortSelect firstOrLast={firstOrLast} setFirstOrLast={setFirstOrLast} />
 
       <Table shifts={shifts} />

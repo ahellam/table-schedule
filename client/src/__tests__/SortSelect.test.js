@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import SortSelect from "../components/SortSelect";
 
 describe("SortSelect", () => {
-  it("should render Sort by:", () => {
+  it("should render the label Sort by:", () => {
     render(<SortSelect />);
     const labelElement = screen.getByText(/sort by:/i);
     expect(labelElement).toBeInTheDocument();
