@@ -1,7 +1,7 @@
 import React from "react";
 
 const Shift = ({ shift }) => {
-  if (!shift) return <td></td>;
+  if (!shift) return <td className="border-[1px] border-black"></td>;
 
   const { start_at, end_at, role, color } = shift;
 

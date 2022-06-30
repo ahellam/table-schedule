@@ -8,19 +8,14 @@ const App = () => {
   const [firstOrLast, setFirstOrLast] = useState("first_name");
 
   useEffect(() => {
-    // fetch(`${shiftURL}?sort_by=${firstOrLast}`)
-    // .then(res => res.json())
-    // .then(setShifts)
-
     const getShifts = async () => {
       let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
-      if (!response.ok){
-        throw new Error (`Request failed with status code ${response.status}`);
+      if (!response.ok) {
+        throw new Error(`Request failed, status code: ${response.status}`);
       }
       let data = await response.json();
       setShifts(data);
     };
-
     getShifts();
   }, [firstOrLast]);
 
