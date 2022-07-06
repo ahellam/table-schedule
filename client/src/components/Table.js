@@ -2,6 +2,7 @@ import React from 'react'
 import EmployeeRow from "./EmployeeRow";
 
 const Table = ({ shifts }) => {
+
   return (
     <div className="m-4">
       <table className="w-full table-auto border-[1px] border-black">
