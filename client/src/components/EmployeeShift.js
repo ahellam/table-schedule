@@ -9,7 +9,7 @@ const EmployeeShift = ({ shifts }) => {
       shifts.find((shift) => shift.day === dayIndex) ?? null
     );
   }
-//  console.log(shiftWithNullDays)
+
   return (
     <Fragment>
       {shiftWithNullDays.map((shift, index) => (

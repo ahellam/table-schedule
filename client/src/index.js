@@ -4,6 +4,7 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+// uncomment to use mock service worker
 // require('./mocks/browser')
 
 ReactDOM.render(

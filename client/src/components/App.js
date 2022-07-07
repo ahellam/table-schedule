@@ -8,20 +8,19 @@ const App = () => {
   const [firstOrLast, setFirstOrLast] = useState("first_name");
 
   useEffect(() => {
-    const getShifts = async () => {
-      try {
-        let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
-        let data = await response.json();
-        setShifts(data);
-      } catch(err){
-          console.error(err)
-      }
-    };
     getShifts();
   }, [firstOrLast]);
 
- 
-
+  const getShifts = async () => {
+    try {
+      let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
+      let data = await response.json();
+      setShifts(data);
+    } catch(err){
+        console.error(err)
+    }
+  };
+  
   return (
     <div className="App" data-testid="app">
       <SortSelect firstOrLast={firstOrLast} setFirstOrLast={setFirstOrLast} />
@@ -32,4 +31,4 @@ const App = () => {
 };
 
 export default App;
-// export { getShifts };
+

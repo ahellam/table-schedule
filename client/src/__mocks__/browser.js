@@ -1,3 +1,5 @@
+// Uncomment to use mock service worker
+
 // import { setupWorker, rest } from 'msw'
 
 // const worker = setupWorker(

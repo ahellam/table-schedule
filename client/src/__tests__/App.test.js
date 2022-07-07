@@ -117,14 +117,6 @@ const sortedByFirstName = [
   }
 ]
 
-// beforeEach(() => {
-//   fetch.resetMocks();
-// });
-// global.fetch = jest.fn(() =>
-//   Promise.resolve({
-//     json: () => Promise.resolve(sortedByFirstName),
-//   })
-// );
 global.fetch = jest.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve(sortedByFirstName),
@@ -132,8 +124,6 @@ global.fetch = jest.fn(() =>
 );
 
 it("loads shifts on mount", async () => {
-// await act(async () => render(<App firstOrLast="first_name"/>))
-// const fetchedShifts = await shifts
-// expect(fetchedShifts).toEqual(sortedByFirstName)
+
 })
 
