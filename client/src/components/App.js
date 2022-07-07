@@ -9,15 +9,18 @@ const App = () => {
 
   useEffect(() => {
     const getShifts = async () => {
-      let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
-      if (!response.ok) {
-        throw new Error(`Request failed, status code: ${response.status}`);
+      try {
+        let response = await fetch(`${shiftURL}?sort_by=${firstOrLast}`);
+        let data = await response.json();
+        setShifts(data);
+      } catch(err){
+          console.error(err)
       }
-      let data = await response.json();
-      setShifts(data);
     };
     getShifts();
   }, [firstOrLast]);
+
+ 
 
   return (
     <div className="App" data-testid="app">
@@ -29,3 +32,4 @@ const App = () => {
 };
 
 export default App;
+// export { getShifts };

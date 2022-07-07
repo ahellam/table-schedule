@@ -4,6 +4,8 @@ import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+// require('./mocks/browser')
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
